@@ -23,5 +23,4 @@ import { StudentProfile } from "./StudentProfile";
        @OneToOne(()=>StudentProfile,{cascade:true,eager:true})
        @JoinColumn({name:'profile_id'})
         public profile:StudentProfile ;
-
     }

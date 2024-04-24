@@ -3,9 +3,11 @@ const router=express.Router();
 import studentController from '../controller/studentController';
 import upload from '../common/utils'
 
-//user rotes....>>>>
-router.post('/addStudent',studentController.addStudentData);
-//router.get('/getdata',studentController.getStudentData);
-router.post('/upload-profile',[upload],studentController.updateProfile)
+//student rotes....>>>>
+
+
+router.post('/addStudent',[upload],studentController.addStudentData);
+router.get('/getdata',studentController.getStudentData);
+//router.get('/getdata/:id',studentController.getStudentDataById)
 
 export default router;
